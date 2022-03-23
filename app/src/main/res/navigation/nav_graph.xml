@@ -2,12 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
     android:label="MetaWallet Deeplink Example"
-    app:startDestination="@id/firstFragment">
+    app:startDestination="@id/nav_login">
     <fragment
-        android:id="@+id/firstFragment"
-        android:name="co.inblock.metawalletcallexample.FirstFragment"
-        android:label="MetaWallet Deeplink Transfer Example"
-        tools:layout="@layout/fragment_first" />
+        android:id="@+id/nav_login"
+        android:name="co.inblock.metawalletcallexample.LoginFragment"
+        android:label="Login example"
+        tools:layout="@layout/login_fragment" />
+    <fragment
+        android:id="@+id/nav_transfer"
+        android:name="co.inblock.metawalletcallexample.TransferFragment"
+        android:label="Transfer example"
+        tools:layout="@layout/transfer_fragment"/>
 </navigation>

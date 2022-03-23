@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".TransferFragment">
 
 
     <ScrollView
@@ -30,7 +30,7 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="NetWork" />
+                    android:text="@string/network" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -41,14 +41,14 @@
                         android:id="@+id/rdoMainnet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Mainnet" />
+                        android:text="@string/mainnet" />
 
                     <RadioButton
                         android:id="@+id/rdoTestnet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:checked="true"
-                        android:text="Testnet" />
+                        android:text="@string/testnet" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -61,13 +61,17 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Receive Address" />
+                    android:labelFor="@+id/edtReceiveAddress"
+                    android:text="@string/receive_address" />
 
                 <EditText
                     android:id="@+id/edtReceiveAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="MT2DaPh2JxtdDwDQpjl1KAiPijHpZC8X0122009e" />
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:text="@string/dummy_address"
+                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -78,16 +82,18 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Amount" />
+                    android:labelFor="@+id/edtAmount"
+                    android:text="@string/amount" />
 
                 <EditText
                     android:id="@+id/edtAmount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:importantForAutofill="no"
                     android:inputType="numberDecimal"
-                    android:text="5.3"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:text="@string/dummy_amount"
+                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -98,16 +104,18 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Token" />
+                    android:labelFor="@+id/edtToken"
+                    android:text="@string/token" />
 
                 <EditText
                     android:id="@+id/edtToken"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:importantForAutofill="no"
                     android:inputType="numberDecimal"
-                    android:text="0"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:text="@string/metacoin_tokenid"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -118,15 +126,18 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Tag" />
+                    android:labelFor="@+id/edtTag"
+                    android:text="@string/tag" />
 
                 <EditText
                     android:id="@+id/edtTag"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:importantForAutofill="no"
                     android:inputType="text"
-                    android:text="DeepLinkTag" />
+                    android:text="@string/dummy_tag"
+                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -137,15 +148,18 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Memo" />
+                    android:labelFor="@+id/edtMemo"
+                    android:text="@string/memo" />
 
                 <EditText
                     android:id="@+id/edtMemo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:importantForAutofill="no"
                     android:inputType="text"
-                    android:text="DeepLink Test Memo" />
+                    android:text="@string/dummy_memo"
+                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -156,13 +170,16 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Topic" />
+                    android:text="@string/topic" />
 
                 <EditText
                     android:id="@+id/edtTopic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="딥링크를 이용한 결제 테스트 입니다. 5.3 MTC를 테스트넷에서 이체 합니다." />
+                    android:inputType="text"
+                    android:text="@string/dummy_topic"
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:importantForAutofill="no" />
             </LinearLayout>
 
             <LinearLayout
@@ -173,7 +190,7 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="CallResult" />
+                    android:text="@string/callresult" />
 
                 <TextView
                     android:id="@+id/txtResult"
@@ -190,14 +207,18 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Result Code" />
+                    android:labelFor="@+id/txtResultCode"
+                    android:text="@string/result_code" />
 
                 <EditText
                     android:id="@+id/txtResultCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="" />
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck"
+                    android:inputType="text"
+                    android:importantForAutofill="no" />
             </LinearLayout>
 
             <LinearLayout
@@ -209,14 +230,18 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="TXID" />
+                    android:labelFor="@+id/txtResultTXID"
+                    android:text="@string/txid" />
 
                 <EditText
                     android:id="@+id/txtResultTXID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="" />
+                    android:inputType="text"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck"
+                    android:importantForAutofill="no" />
             </LinearLayout>
 
             <LinearLayout
@@ -228,14 +253,18 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Message" />
+                    android:labelFor="@+id/txtResultMessage"
+                    android:text="@string/message" />
 
                 <EditText
                     android:id="@+id/txtResultMessage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="" />
+                    android:inputType="text"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck"
+                    android:importantForAutofill="no" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -244,7 +273,7 @@
         android:id="@+id/button_first2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Call MetaWallet"
+        android:text="@string/transfer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

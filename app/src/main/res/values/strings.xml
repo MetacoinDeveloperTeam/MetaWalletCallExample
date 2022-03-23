@@ -1,6 +1,51 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MetaWalletCallExample</string>
+    <string name="nav_header_title">MetaWallet Deeplink Example</string>
+    <string name="nav_header_subtitle">dev@inblock.co</string>
+    <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="login">Login</string>
+    <string name="transfer">Transfer</string>
     <!-- Strings used for fragments for navigation -->
 
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="metawallet_not_found">MetaWallet not found</string>
+    <string name="success">Success</string>
+    <string name="cancel_by_user">Cancel by user</string>
+    <string name="result">Result</string>
+    <string name="result_code">Result Code</string>
+    <string name="txid">TXID</string>
+    <string name="message">Message</string>
+    <string name="execute">Execute</string>
+    <string name="network">NetWork</string>
+    <string name="mainnet">Mainnet</string>
+    <string name="testnet">Testnet</string>
+    <string name="name">name</string>
+    <string name="dappname_sample">DappName Sample</string>
+    <string name="callbacktype">callbackType</string>
+    <string name="receive_address">Receive Address</string>
+    <string name="amount">Amount</string>
+    <string name="result_success">RESULT_SUCCESS</string>
+    <string name="result_cancel">RESULT_CANCELED</string>
+    <string name="url">url</string>
+    <string name="deeplink">deeplink</string>
+    <string name="intent">intent</string>
+    <string name="callback">callback</string>
+    <string name="reqkey">reqKey</string>
+    <string name="dummy_url">https://metacoin.network/img/common/og_share.png</string>
+    <string name="icons">icons</string>
+    <string name="address">Address</string>
+    <string name="dummy_reqkey">reqKeySample</string>
+    <string name="splitline">SplitLIne</string>
+    <string name="metacoin_tokenid">0</string>
+    <string name="token">Token</string>
+    <string name="dummy_amount">5.3</string>
+    <string name="dummy_address" tools:ignore="Typos">MT2DaPh2JxtdDwDQpjl1KAiPijHpZC8X0122009e</string>
+    <string name="tag">Tag</string>
+    <string name="dummy_tag">DeepLinkTag</string>
+    <string name="memo">Memo</string>
+    <string name="dummy_memo">DeepLink Test Memo</string>
+    <string name="topic">Topic</string>
+    <string name="dummy_topic">딥링크를 이용한 결제 테스트 입니다. 5.3 MTC를 테스트넷에서 이체 합니다.</string>
+    <string name="callresult">CallResult</string>
 </resources>

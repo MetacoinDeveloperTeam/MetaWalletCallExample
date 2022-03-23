@@ -14,10 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import co.inblock.metawalletcallexample.databinding.FragmentFirstBinding;
+import co.inblock.metawalletcallexample.databinding.LoginFragmentBinding;
 
-public class FirstFragment extends Fragment {
-    private FragmentFirstBinding binding;
+
+public class LoginFragment extends Fragment {
+    private LoginFragmentBinding binding;
 
     ActivityResultLauncher<Intent>
             mStartForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
@@ -29,15 +30,15 @@ public class FirstFragment extends Fragment {
                         return;
                     }
                     Bundle bundle = intent.getExtras();
-                    binding.txtResult.setText("RESULT_OK");
+                    binding.txtResult.setText(R.string.result_success);
                     binding.txtResultCode.setText(bundle.getString("CODE", ""));
                     binding.txtResultMessage.setText(bundle.getString("MESSAGE", ""));
-                    binding.txtResultTXID.setText(bundle.getString("TXID", ""));
+                    binding.txtResultAddress.setText(bundle.getString("DATA", ""));
                 } else if (i == Activity.RESULT_CANCELED) {
-                    binding.txtResult.setText("RESULT_CANCELED");
+                    binding.txtResult.setText(R.string.result_cancel);
                     binding.txtResultCode.setText("");
                     binding.txtResultMessage.setText("");
-                    binding.txtResultTXID.setText("");
+                    binding.txtResultAddress.setText("");
                 }
             });
 
@@ -48,10 +49,10 @@ public class FirstFragment extends Fragment {
 
     @Override
     public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
+            @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = LoginFragmentBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -59,32 +60,44 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonFirst2.setOnClickListener(v -> {
+        binding.btnLogin.setOnClickListener(v -> {
             Uri params = Uri.parse("metawallet://co.inblock");
             Intent intent = new Intent(Intent.ACTION_VIEW, params);
             // intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-            intent.putExtra("action", "send");
-            intent.putExtra("address", binding.edtReceiveAddress.getText().toString());
-            intent.putExtra("amount", binding.edtAmount.getText().toString());
+            intent.putExtra("action", "login");
+            intent.putExtra("callback", binding.edtCallback.getText().toString());
+            intent.putExtra("reqKey", binding.edtReqKey.getText().toString());
             if (binding.rdoMainnet.isChecked()) {
                 intent.putExtra("network", "1");
             } else {
                 intent.putExtra("network", "5");
             }
-            intent.putExtra("token", binding.edtToken.getText().toString());
 
-            // Option
-            intent.putExtra("tag", binding.edtTag.getText().toString());
-            intent.putExtra("memo", binding.edtMemo.getText().toString());
-            intent.putExtra("topic", binding.edtTopic.getText().toString());
+            intent.putExtra("callbackType", "intent");
+            if (binding.rdodeeplink.isChecked()) {
+                intent.putExtra("callbackType", "deeplink");
+            } else if (binding.rdoUrl.isChecked()) {
+                intent.putExtra("callbackType", "url");
+            }
+
+            intent.putExtra("name", binding.edtName.getText().toString());
+            intent.putExtra("icons", binding.edtIcons.getText().toString());
+
 
             binding.txtResult.setText("");
             binding.txtResultCode.setText("");
             binding.txtResultMessage.setText("");
-            binding.txtResultTXID.setText("");
+            binding.txtResultAddress.setText("");
 
-            mStartForResult.launch(intent);
+            try {
+                mStartForResult.launch(intent);
+            } catch (Exception e) {
+                binding.txtResult.setText(R.string.metawallet_not_found);
+                binding.txtResultCode.setText("");
+                binding.txtResultMessage.setText(e.getLocalizedMessage());
+                binding.txtResultAddress.setText("");
+            }
         });
     }
 
