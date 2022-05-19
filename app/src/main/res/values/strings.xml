@@ -11,6 +11,7 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="metawallet_not_found">MetaWallet not found</string>
     <string name="success">Success</string>
+    <string name="error">Error</string>
     <string name="cancel_by_user">Cancel by user</string>
     <string name="result">Result</string>
     <string name="result_code">Result Code</string>
@@ -48,4 +49,13 @@
     <string name="topic">Topic</string>
     <string name="dummy_topic">딥링크를 이용한 결제 테스트 입니다. 5.3 MTC를 테스트넷에서 이체 합니다.</string>
     <string name="callresult">CallResult</string>
+    <string name="any">Any</string>
+    <string name="owner">Owner</string>
+    <string name="generate">Generate</string>
+    <string name="burn">Burn</string>
+    <string name="create">Create</string>
+    <string name="increase">Increase</string>
+    <string name="update">Update</string>
+    <string name="mrc402id">MRC402_ad0648dbb191a62202d660c2344833d90</string>
+    <string name="mrc402owner">MTZ0VzldZqNu6vSLX0ttjSmtrpYpDJJj9c0a171c</string>
 </resources>

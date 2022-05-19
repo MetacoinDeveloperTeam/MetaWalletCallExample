@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="ViewItemAttrs">
+        <attr name="Item_label" format="reference|string" />
+        <attr name="Item_value" format="reference|string" />
+        <attr name="Item_readonly" format="boolean" />
+    </declare-styleable>
+</resources>

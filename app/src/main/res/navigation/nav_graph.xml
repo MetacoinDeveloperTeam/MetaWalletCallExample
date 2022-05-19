@@ -7,11 +7,56 @@
     <fragment
         android:id="@+id/nav_login"
         android:name="co.inblock.metawalletcallexample.LoginFragment"
-        android:label="Login example"
+        android:label="Login"
         tools:layout="@layout/login_fragment" />
     <fragment
-        android:id="@+id/nav_transfer"
-        android:name="co.inblock.metawalletcallexample.TransferFragment"
-        android:label="Transfer example"
-        tools:layout="@layout/transfer_fragment"/>
+        android:id="@+id/nav_mrc010create"
+        android:name="co.inblock.metawalletcallexample.MRC010CreateFragment"
+        android:label="MRC010 Create"
+        tools:layout="@layout/mrc010create_fragment"/>
+    <fragment
+        android:id="@+id/nav_mrc010transfer"
+        android:name="co.inblock.metawalletcallexample.MRC010TransferFragment"
+        android:label="MRC010 Transfer"
+        tools:layout="@layout/mrc010transfer_fragment"/>
+    <fragment
+        android:id="@+id/nav_mrc010update"
+        android:name="co.inblock.metawalletcallexample.MRC010UpdateFragment"
+        android:label="MRC010 Update"
+        tools:layout="@layout/mrc010update_fragment"/>
+    <fragment
+        android:id="@+id/nav_mrc010increase"
+        android:name="co.inblock.metawalletcallexample.MRC010IncreaseFragment"
+        android:label="MRC010 Increase"
+        tools:layout="@layout/mrc010increase_fragment"/>
+    <fragment
+        android:id="@+id/nav_mrc010burn"
+        android:name="co.inblock.metawalletcallexample.MRC010BurnFragment"
+        android:label="MRC010 Burn"
+        tools:layout="@layout/mrc010burn_fragment"/>
+    <fragment
+        android:id="@+id/nav_mrc402create"
+        android:name="co.inblock.metawalletcallexample.MRC402CreateFragment"
+        android:label="MRC402 Create"
+        tools:layout="@layout/mrc402create_fragment"/>
+    <fragment
+        android:id="@+id/nav_mrc402transfer"
+        android:name="co.inblock.metawalletcallexample.MRC402TransferFragment"
+        android:label="MRC402 Transfer"
+        tools:layout="@layout/mrc402transfer_fragment"/>
+    <fragment
+        android:id="@+id/nav_mrc402update"
+        android:name="co.inblock.metawalletcallexample.MRC402UpdateFragment"
+        android:label="MRC402 Update"
+        tools:layout="@layout/mrc402update_fragment"/>
+    <fragment
+        android:id="@+id/nav_mrc402increase"
+        android:name="co.inblock.metawalletcallexample.MRC402MintFragment"
+        android:label="MRC402 Increase"
+        tools:layout="@layout/mrc402mint_fragment"/>
+    <fragment
+        android:id="@+id/nav_mrc402burn"
+        android:name="co.inblock.metawalletcallexample.MRC402BurnFragment"
+        android:label="MRC402 Burn"
+        tools:layout="@layout/mrc402burn_fragment"/>
 </navigation>

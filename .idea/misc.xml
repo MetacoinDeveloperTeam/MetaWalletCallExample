@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../Library/Android/sdk/platforms/android-31/data/res/drawable/edit_text.xml" value="0.662" />
+        <entry key="app/src/main/res/drawable-v24/app_btn_border.xml" value="0.662" />
+        <entry key="app/src/main/res/drawable-v24/app_btn_border_readonly.xml" value="0.662" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.353" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.388" />
         <entry key="app/src/main/res/drawable-v24/ic_menu_camera.xml" value="0.388" />
@@ -11,14 +14,27 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16195761856710394" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.4155597722960152" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.16195761856710394" />
+        <entry key="app/src/main/res/layout/dialog_text_input.xml" value="0.4244791666666667" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_transfer.xml" value="0.42239583333333336" />
-        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.42239583333333336" />
+        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/mrc010burn_fragment.xml" value="0.5424229632756438" />
+        <entry key="app/src/main/res/layout/mrc010create_fragment.xml" value="0.5465116279069767" />
+        <entry key="app/src/main/res/layout/mrc010increase_fragment.xml" value="0.5993470149253731" />
+        <entry key="app/src/main/res/layout/mrc010transfer_fragment.xml" value="0.6234837457544881" />
+        <entry key="app/src/main/res/layout/mrc010update_fragment.xml" value="0.5424229632756438" />
+        <entry key="app/src/main/res/layout/mrc402burn_fragment.xml" value="0.6692708333333334" />
+        <entry key="app/src/main/res/layout/mrc402create_fragment.xml" value="0.4948301329394387" />
+        <entry key="app/src/main/res/layout/mrc402increase_fragment.xml" value="0.6692708333333334" />
+        <entry key="app/src/main/res/layout/mrc402mint_fragment.xml" value="0.6645833333333333" />
+        <entry key="app/src/main/res/layout/mrc402transfer_fragment.xml" value="0.6599897277863379" />
+        <entry key="app/src/main/res/layout/mrc402update_fragment.xml" value="0.6212268743914313" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.48867753623188404" />
         <entry key="app/src/main/res/layout/transfer_fragment.xml" value="0.5126811594202898" />
+        <entry key="app/src/main/res/layout/view_item.xml" value="0.553125" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.15885416666666666" />
-        <entry key="app/src/main/res/menu/menu_main.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.67" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.388" />
       </map>
     </option>

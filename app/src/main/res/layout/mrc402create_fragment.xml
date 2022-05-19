@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    tools:context=".MRC402CreateFragment">
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintBottom_toTopOf="@+id/btnAction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -36,7 +36,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
                     android:textColor="@color/black"
-                    android:weightSum="3"
+                    android:weightSum="2"
                     app:layout_constraintHorizontal_weight="3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -60,14 +60,6 @@
                         android:text="@string/testnet"
                         tools:ignore="TouchTargetSizeCheck" />
 
-                    <RadioButton
-                        android:id="@+id/rdoAny"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:text="@string/any"
-                        tools:ignore="TouchTargetSizeCheck" />
                 </RadioGroup>
 
                 <TextView
@@ -144,32 +136,29 @@
                     android:contentDescription="@string/any" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viName"
+                android:id="@+id/viAppName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:Item_label="@string/name"
                 app:Item_value="@string/dappname_sample" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viCallback"
+                android:id="@+id/viAppCallback"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:Item_label="@string/callback"
                 app:Item_value="" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viReqKey"
+                android:id="@+id/viAppReqKey"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:Item_label="@string/reqkey"
                 app:Item_value="@string/dummy_reqkey" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viIcons"
+                android:id="@+id/viAppIcons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:Item_label="@string/icons"
@@ -183,13 +172,101 @@
                 android:background="@color/black"
                 android:contentDescription="@string/splitline" />
 
-
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viResultAddress"
+                android:id="@+id/viName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:Item_label="@string/address"
-                app:Item_readonly="true" />
+                app:Item_label="@string/name"
+                app:Item_value="Sample Token" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viCreator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Creator"
+                app:Item_value="@string/dummy_address" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viCreatorcommission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Creator commission"
+                app:Item_value="5" />
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viTotalSupply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="TotalSupply"
+                app:Item_value="100000" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Decimal"
+                app:Item_value="8" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Url"
+                app:Item_value="https://metacoin.network/" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viImageUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Token ImageUrl"
+                app:Item_value="@string/dummy_url" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viShareholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="ShareHolder"
+                app:Item_value="{&quot;MTyrvfILKz0wEEPfQW6H1Jn4WUUMAXcB1f44cc94&quot;:&quot;5&quot;}" />
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viInitialReserve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Initial Reserve"
+                app:Item_value="" />
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viExpiredate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Expiredate"
+                app:Item_value="0" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="DATA"
+                app:Item_value="{&quot;Creator&quot;:&quot;NFT Creator&quot;}" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Information"
+                app:Item_value="Token information" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viSocialmedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Social Media"
+                app:Item_value="{&quot;twitter&quot; => &quot;htts://www.twitter.com/metacoin&quot;, &quot;Schedule&quot; => &quot;https://domain.com/path&quot;}" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/black"
+                android:contentDescription="@string/splitline" />
 
             <co.inblock.metawalletcallexample.viewItem
                 android:id="@+id/viResult"
@@ -218,14 +295,15 @@
                 android:layout_height="wrap_content"
                 app:Item_label="@string/message"
                 app:Item_readonly="true" />
+
         </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnAction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:text="@string/create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

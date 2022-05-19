@@ -8,10 +8,34 @@
             android:id="@+id/nav_login"
             android:title="@string/login" />
         <item
-            android:id="@+id/nav_transfer"
-            android:title="@string/transfer" />
+            android:id="@+id/nav_mrc010create"
+            android:title="MRC010 Create" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_mrc010transfer"
+            android:title="MRC010 Transfer" />
+        <item
+            android:id="@+id/nav_mrc010update"
+            android:title="MRC010 Update" />
+        <item
+            android:id="@+id/nav_mrc010increase"
+            android:title="MRC010 Increase" />
+        <item
+            android:id="@+id/nav_mrc010burn"
+            android:title="MRC010 Burn" />
+        <item
+            android:id="@+id/nav_mrc402create"
+            android:title="MRC402 Create" />
+        <item
+            android:id="@+id/nav_mrc402transfer"
+            android:title="MRC402 Transfer" />
+        <item
+            android:id="@+id/nav_mrc402update"
+            android:title="MRC402 Update" />
+        <item
+            android:id="@+id/nav_mrc402increase"
+            android:title="MRC402 Increase" />
+        <item
+            android:id="@+id/nav_mrc402burn"
+            android:title="MRC402 Burn" />
     </group>
 </menu>

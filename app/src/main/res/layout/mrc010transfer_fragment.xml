@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    tools:context=".MRC010TransferFragment">
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintBottom_toTopOf="@+id/btnAction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -36,7 +36,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
                     android:textColor="@color/black"
-                    android:weightSum="3"
+                    android:weightSum="2"
                     app:layout_constraintHorizontal_weight="3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -60,14 +60,6 @@
                         android:text="@string/testnet"
                         tools:ignore="TouchTargetSizeCheck" />
 
-                    <RadioButton
-                        android:id="@+id/rdoAny"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:text="@string/any"
-                        tools:ignore="TouchTargetSizeCheck" />
                 </RadioGroup>
 
                 <TextView
@@ -91,89 +83,74 @@
                 android:layout_marginVertical="5dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <RadioGroup
-                    android:layout_width="match_parent"
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_btn_border"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:weightSum="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rdoUrl"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/app_btn_border"
-                    android:orientation="horizontal"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:textColor="@color/black"
-                    android:weightSum="3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:layout_weight="1"
+                    android:text="@string/url"
+                    tools:ignore="TouchTargetSizeCheck" />
 
-                    <RadioButton
-                        android:id="@+id/rdoUrl"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/url"
-                        tools:ignore="TouchTargetSizeCheck" />
-
-                    <RadioButton
-                        android:id="@+id/rdodeeplink"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/deeplink"
-                        tools:ignore="TouchTargetSizeCheck" />
-
-                    <RadioButton
-                        android:id="@+id/rdointent"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:text="@string/intent"
-                        tools:ignore="TouchTargetSizeCheck" />
-
-                </RadioGroup>
-
-                <TextView
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/rdodeeplink"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:text="@string/callbacktype"
-                    android:layout_marginStart="20dp"
-                    android:paddingHorizontal="5dp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/any" />
+                    android:layout_weight="1"
+                    android:text="@string/deeplink"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rdointent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/intent"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </RadioGroup>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viName"
+                android:id="@+id/viAppName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:Item_label="@string/name"
                 app:Item_value="@string/dappname_sample" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viCallback"
+                android:id="@+id/viAppCallback"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:Item_label="@string/callback"
                 app:Item_value="" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viReqKey"
+                android:id="@+id/viAppReqKey"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:Item_label="@string/reqkey"
                 app:Item_value="@string/dummy_reqkey" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viIcons"
+                android:id="@+id/viAppIcons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:Item_label="@string/icons"
                 app:Item_value="@string/dummy_url" />
+
 
             <ImageView
                 android:layout_width="match_parent"
@@ -185,11 +162,57 @@
 
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viResultAddress"
+                android:id="@+id/viTopic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:Item_label="@string/address"
-                app:Item_readonly="true" />
+                app:Item_label="@string/topic"
+                app:Item_value="@string/dummy_topic" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viReceiveAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="@string/receive_address"
+                app:Item_value="@string/dummy_address" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="@string/amount"
+                app:Item_value="@string/dummy_amount" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viToken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="@string/token"
+                app:Item_value="@string/metacoin_tokenid" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="@string/tag"
+                app:Item_value="@string/dummy_tag" />
+
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viMemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="@string/memo"
+                app:Item_value="@string/dummy_memo" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/black"
+                android:contentDescription="@string/splitline" />
+
 
             <co.inblock.metawalletcallexample.viewItem
                 android:id="@+id/viResult"
@@ -222,10 +245,10 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnAction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:text="@string/transfer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
