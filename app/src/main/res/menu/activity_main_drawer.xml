@@ -37,5 +37,24 @@
         <item
             android:id="@+id/nav_mrc402burn"
             android:title="MRC402 Burn" />
+        <item
+            android:id="@+id/nav_mrc402auction"
+            android:title="MRC402 Auction" />
+        <item
+            android:id="@+id/nav_mrc402auctionbid"
+            android:title="MRC402 Auction bid" />
+        <item
+            android:id="@+id/nav_mrc402unauction"
+            android:title="MRC402 UnAuction" />
+        <item
+            android:id="@+id/nav_mrc402sell"
+            android:title="MRC402 Sell" />
+        <item
+            android:id="@+id/nav_mrc402buy"
+            android:title="MRC402 Buy" />
+        <item
+            android:id="@+id/nav_mrc402unsell"
+            android:title="MRC402 UnSell" />
+
     </group>
 </menu>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MRC402TransferFragment">
+    tools:context=".MRC402UnAuctionFragment">
 
     <ScrollView
         android:layout_width="0dp"
@@ -25,58 +25,24 @@
                 layout="@layout/common_appinfo_fragment"
                 android:visibility="gone" />
 
-
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viTopic"
+                android:id="@+id/viDexid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:Item_label="DEX ID"
                 app:Item_require="true"
-                app:Item_label="@string/topic"
-                app:Item_value="@string/dummy_topic" />
-
+                app:Item_value="" />
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viReceiveAddress"
+                android:id="@+id/viAuctioneer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:Item_require="true"
-                app:Item_label="@string/receive_address"
+                app:Item_label="Auctioneer"
                 app:Item_value="@string/dummy_address" />
-
-            <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viAmount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:Item_require="true"
-                app:Item_label="@string/amount"
-                app:Item_value="@string/dummy_amount" />
-
-            <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viToken"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:Item_require="true"
-                app:Item_label="@string/token"
-                app:Item_value="@string/metacoin_tokenid" />
-
-            <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viTag"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:Item_label="@string/tag"
-                app:Item_value="@string/dummy_tag" />
-
-
-            <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viMemo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:Item_label="@string/memo"
-                app:Item_value="@string/dummy_memo" />
-
             <include
                 android:id="@+id/result"
                 layout="@layout/common_result_fragment"
                 android:visibility="gone" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -84,7 +50,7 @@
         android:id="@+id/btnAction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/transfer"
+        android:text="@string/unauction"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

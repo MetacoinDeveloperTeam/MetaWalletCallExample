@@ -1,17 +1,12 @@
 package co.inblock.metawalletcallexample;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
@@ -24,39 +19,36 @@ public class viewItem extends ConstraintLayout {
     Drawable edtBackground = null;
     TextView txtLabel;
     TextView edtValue;
+    TextView txtRequire;
     Context context;
     boolean isReadOnly = false;
     private String Label, Value;
 
     public viewItem(Context context) {
         super(context);
-        initView(context, null, 0, 0);
+        initView(context, null, 0);
     }
 
     public viewItem(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        initView(context, attrs, 0, 0);
+        initView(context, attrs, 0);
     }
 
     public viewItem(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initView(context, attrs, defStyleAttr, 0);
-    }
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public viewItem(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        initView(context, attrs, defStyleAttr, defStyleRes);
+        initView(context, attrs, defStyleAttr);
     }
 
-    private void initView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes){
+    private void initView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         View v = inflate(context, R.layout.view_item, this);
 
         this.context = context;
         txtLabel = v.findViewById(R.id.txtLabel);
         edtValue = v.findViewById(R.id.edtValue);
+        txtRequire = v.findViewById(R.id.txtRequire);
 
         edtValue.setOnClickListener(v1 -> {
-            if(isReadOnly) {
+            if (isReadOnly) {
                 return;
             }
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -67,22 +59,39 @@ public class viewItem extends ConstraintLayout {
             builder.setView(dialogView);
             builder.setPositiveButton(android.R.string.ok, (dialog, which) -> {
                 dialog.dismiss();
-                edtValue.setText( input.getText().toString());
+                if (input != null && input.getText() != null) {
+                    edtValue.setText(input.getText().toString());
+                }
             });
             builder.setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss());
             input.setText(edtValue.getText());
             builder.show();
         });
 
-        if(attrs == null) {
+        if (attrs == null) {
             return;
         }
 
-        TypedArray typedArray = context.getTheme().obtainStyledAttributes(attrs, R.styleable.ViewItemAttrs, defStyleAttr, defStyleRes);
+        TypedArray typedArray = context.getTheme().obtainStyledAttributes(attrs, R.styleable.ViewItemAttrs, defStyleAttr, 0);
         setLabel(typedArray.getString(R.styleable.ViewItemAttrs_Item_label));
         setText(typedArray.getString(R.styleable.ViewItemAttrs_Item_value));
+        setRequire(typedArray.getBoolean(R.styleable.ViewItemAttrs_Item_require, false));
         setReadOnly(typedArray.getBoolean(R.styleable.ViewItemAttrs_Item_readonly, false));
         typedArray.recycle();
+    }
+
+    public String getLabel() {
+        return Label;
+    }
+
+    public void setRequire(boolean isRequire) {
+        if(isRequire) {
+            txtRequire.setVisibility(View.VISIBLE);
+        } else {
+            txtRequire.setVisibility(View.GONE);
+        }
+        invalidate();
+        requestLayout();
     }
 
     public void setLabel(String label) {
@@ -95,17 +104,6 @@ public class viewItem extends ConstraintLayout {
     public void setLabel(@StringRes int ResID) {
         txtLabel.setText(ResID);
         Label = context.getString(ResID);
-        invalidate();
-        requestLayout();
-    }
-
-    public String getLabel() {
-        return Label;
-    }
-
-    public void setValue(String value) {
-        Value = value;
-        edtValue.setText(Value);
         invalidate();
         requestLayout();
     }
@@ -128,10 +126,17 @@ public class viewItem extends ConstraintLayout {
         return edtValue.getText().toString();
     }
 
+    public void setValue(String value) {
+        Value = value;
+        edtValue.setText(Value);
+        invalidate();
+        requestLayout();
+    }
+
     public void setReadOnly(boolean isReadOnly) {
         this.isReadOnly = isReadOnly;
-        if(isReadOnly) {
-            if(edtBackground == null) {
+        if (isReadOnly) {
+            if (edtBackground == null) {
                 edtBackground = edtValue.getBackground();
             }
             edtValue.setBackgroundResource(R.drawable.app_btn_border_readonly);

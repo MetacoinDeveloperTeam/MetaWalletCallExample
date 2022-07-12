@@ -41,7 +41,7 @@
     <string name="metacoin_tokenid">0</string>
     <string name="token">Token</string>
     <string name="dummy_amount">5.3</string>
-    <string name="dummy_address" tools:ignore="Typos">MT2DaPh2JxtdDwDQpjl1KAiPijHpZC8X0122009e</string>
+    <string name="dummy_address" tools:ignore="Typos">MTIuY8XnSKSerfzuYmLFZ5JYGFGoMzkc37134b27</string>
     <string name="tag">Tag</string>
     <string name="dummy_tag">DeepLinkTag</string>
     <string name="memo">Memo</string>
@@ -56,6 +56,17 @@
     <string name="create">Create</string>
     <string name="increase">Increase</string>
     <string name="update">Update</string>
-    <string name="mrc402id">MRC402_ad0648dbb191a62202d660c2344833d90</string>
-    <string name="mrc402owner">MTZ0VzldZqNu6vSLX0ttjSmtrpYpDJJj9c0a171c</string>
+    <string name="dummy_mrc402id">MRC402_9dcb4a7628c92dfdde497d91467e70550</string>
+    <string name="duumy_platform_name">Hotdeal.io</string>
+    <string name="duumy_platform_url">https://hotdeal.io</string>
+    <string name="duumy_platform_commission">5</string>
+    <string name="duumy_platform_address">MTIuY8XnSKSerfzuYmLFZ5JYGFGoMzkc37134b27</string>
+    <string name="mint">Mint</string>
+    <string name="auction">auction</string>
+    <string name="bidding">Bidding</string>
+    <string name="buy">Buy</string>
+    <string name="sell">Sell</string>
+    <string name="unauction">Auction cancel</string>
+    <string name="unsell">Sell cancel</string>
+
 </resources>

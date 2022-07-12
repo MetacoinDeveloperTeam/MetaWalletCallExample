@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MRC402CreateFragment">
+    tools:context=".MRC402AuctionFragment">
 
     <ScrollView
         android:layout_width="0dp"
@@ -26,101 +26,100 @@
                 android:visibility="gone" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viName"
+                android:id="@+id/viMRC402ID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:Item_label="MRC402 ID"
                 app:Item_require="true"
-                app:Item_label="@string/name"
-                app:Item_value="Sample Token" />
+                app:Item_value="@string/dummy_mrc402id" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viCreator"
+                android:id="@+id/viAuctioneer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:Item_require="true"
-                app:Item_label="Creator"
+                app:Item_label="Auctioneer"
                 app:Item_value="@string/dummy_address" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viCreatorcommission"
+                android:id="@+id/viAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:Item_label="Creator commission"
+                app:Item_label="Amount"
+                app:Item_require="true"
                 app:Item_value="5" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viTotalSupply"
+                android:id="@+id/viToken"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:Item_label="Token"
                 app:Item_require="true"
-                app:Item_label="TotalSupply"
-                app:Item_value="100000" />
-
-            <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viDecimal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:Item_require="true"
-                app:Item_label="Decimal"
-                app:Item_value="8" />
-
-            <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viUrl"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:Item_require="true"
-                app:Item_label="Url"
-                app:Item_value="https://metacoin.network/" />
-
-            <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viImageUrl"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:Item_require="true"
-                app:Item_label="Token ImageUrl"
-                app:Item_value="@string/dummy_url" />
-
-            <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viShareholder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:Item_label="ShareHolder"
-                app:Item_value="{&quot;MTyrvfILKz0wEEPfQW6H1Jn4WUUMAXcB1f44cc94&quot;:&quot;5&quot;}" />
-
-            <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viInitialReserve"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:Item_label="Initial Reserve"
-                app:Item_value="" />
-
-            <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viExpiredate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:Item_label="Expiredate"
                 app:Item_value="0" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viData"
+                android:id="@+id/viAuctionStartPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:Item_label="DATA"
-                app:Item_value="{&quot;Creator&quot;:&quot;NFT Creator&quot;}" />
+                app:Item_label="Auction start price"
+                app:Item_require="true"
+                app:Item_value="100" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viInformation"
+                android:id="@+id/viAuctionBiddingUnit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:Item_label="Information"
-                app:Item_value="Token information" />
+                app:Item_label="Auction bidding unit"
+                app:Item_require="true"
+                app:Item_value="10" />
 
             <co.inblock.metawalletcallexample.viewItem
-                android:id="@+id/viSocialmedia"
+                android:id="@+id/viAuctionBuynowPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:Item_label="Social Media"
-                app:Item_value="{&quot;twitter&quot; => &quot;htts://www.twitter.com/metacoin&quot;, &quot;Schedule&quot; => &quot;https://domain.com/path&quot;}" />
+                app:Item_label="Auction buynow pricel"
+                app:Item_value="150" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viAuctionStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Auction start date(Unix timestamp)"
+                app:Item_value="" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viAuctionEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Auction end date(Unix timestamp)"
+                app:Item_value="" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viPlatformName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Platform name"
+                app:Item_value="@string/duumy_platform_name" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viPlatFormURL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Platform URL"
+                app:Item_value="@string/duumy_platform_url" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viPlatformAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Platform address"
+                app:Item_value="@string/duumy_platform_address" />
+
+            <co.inblock.metawalletcallexample.viewItem
+                android:id="@+id/viPlatformCommission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:Item_label="Platform commission"
+                app:Item_value="@string/duumy_platform_commission" />
 
             <include
                 android:id="@+id/result"
@@ -134,7 +133,7 @@
         android:id="@+id/btnAction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/create"
+        android:text="@string/auction"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
